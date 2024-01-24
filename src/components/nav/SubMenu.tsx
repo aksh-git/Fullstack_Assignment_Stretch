@@ -51,41 +51,6 @@ export default function SubMenu({
     handleTechChange(updatedSelectedTech);
   };
 
-  {
-    /* <div className="w-3/5">
-              {fois.map((foi) => (
-                <div key={foi} className="flex items-center">
-                  <input
-                    type="checkbox"
-                    id={`foi-${foi}`}
-                    value={foi}
-                    checked={selectedFOI.includes(foi)}
-                    onChange={handleFOICheckboxChange}
-                  />
-                  <label htmlFor={`foi-${foi}`} className="ml-1">
-                    {foi}
-                  </label>
-                </div>
-              ))}
-            </div>
-            <div className="w-2/5">
-              {techStack.map((tech) => (
-                <div key={tech} className="flex items-center">
-                  <input
-                    type="checkbox"
-                    id={`tech-${tech}`}
-                    value={tech}
-                    checked={selectedTech.includes(tech)}
-                    onChange={handleTechCheckboxChange}
-                  />
-                  <label htmlFor={`tech-${tech}`} className="ml-1">
-                    {tech}
-                  </label>
-                </div>
-              ))}
-            </div> */
-  }
-
   return (
     <nav className="flex w-full pb-2 justify-between items-end flex-col lg:flex-row px-4 md:px-2 backdrop-blur-sm sticky top-2 z-50 gap-8">
       <div className="w-full lg:w-5/12 block">

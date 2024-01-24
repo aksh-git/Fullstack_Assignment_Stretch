@@ -121,28 +121,30 @@ export default function Profile({ student }: any) {
           <p className="capitalize text-lg font-normal text-accent">
             {student?.fieldOfInterest.join(",")}
           </p>
-          {student?.bio
-            .trim()
-            .split(". ")
-            .map((p: string) => {
-              return (
-                <p className="text-base" key={0}>
-                  {p}
-                  <br />
-                </p>
-              );
-            })}
+          {student.bio &&
+            student.bio
+              .trim()
+              .split(". ")
+              .map((p: string) => {
+                return (
+                  <p className="text-base" key={0}>
+                    {p}
+                    <br />
+                  </p>
+                );
+              })}
           <div className="flex flex-wrap items-center gap-2 mt-6 text-sm font-medium">
-            {student?.techStack?.map((tech: string) => {
-              return (
-                <div
-                  key={tech}
-                  className="py-1 px-4 bg-secondary/30 rounded-full"
-                >
-                  {tech}
-                </div>
-              );
-            })}
+            {student?.techStack.length > 0 &&
+              student.techStack.map((tech: string) => {
+                return (
+                  <div
+                    key={tech}
+                    className="py-1 px-4 bg-secondary/30 rounded-full"
+                  >
+                    {tech}
+                  </div>
+                );
+              })}
           </div>
         </div>
       </div>
