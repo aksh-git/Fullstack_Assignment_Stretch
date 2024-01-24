@@ -22,3 +22,7 @@ export async function GET(req: NextRequest, res: NextResponse) {
     });
   }
 }
+
+export async function POST(req: NextRequest, res: NextResponse) {
+  return NextResponse.json({ hello: "world" });
+}

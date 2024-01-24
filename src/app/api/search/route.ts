@@ -13,9 +13,9 @@ export async function GET(req: NextRequest, res: NextResponse) {
     }
 
     // Make a request to the backend search endpoint
-    const backendApiUrl = `${process.env.API_URL}/api/search/students?query=${encodeURIComponent(
-      query.toString()
-    )}`; // Replace with your actual backend URL
+    const backendApiUrl = `${
+      process.env.API_URL
+    }/api/search/students?query=${encodeURIComponent(query.toString())}`; // Replace with your actual backend URL
 
     const response = await fetch(backendApiUrl);
     const data = await response.json();
@@ -27,4 +27,8 @@ export async function GET(req: NextRequest, res: NextResponse) {
       message: "Internal Server Error",
     });
   }
+}
+
+export async function POST(req: NextRequest, res: NextResponse) {
+  return NextResponse.json({ hello: "world" });
 }

@@ -1,5 +1,6 @@
 "use client";
-import SearchReasults from "@/components/SearchReasults";
+
+import SearchResults from "@/components/SearchResults";
 import SearchForm from "@/components/forms/SearchForm";
 import MainMenu from "@/components/nav/MainMenu";
 import { useSearchParams } from "next/navigation";
@@ -19,6 +20,7 @@ export default function Page() {
       fetch(api_url)
         .then((res) => res.json())
         .then((data) => {
+          console.log("Logged",data);
           setData(data);
           setLoading(false);
         });
@@ -47,7 +49,7 @@ export default function Page() {
           </div>
         </div>
       </nav>
-      {query && data?.success && <SearchReasults students={data.results} />}
+      {data?.success && <SearchResults students={data.results} />}
     </>
   );
 }

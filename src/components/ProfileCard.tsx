@@ -3,22 +3,6 @@
 import Image from "next/image";
 import React, { useEffect, useState } from "react";
 
-const demoStudent = {
-  _id: "65a92d09b4a585a4e2d5340f",
-  name: "Pauline Fontai",
-  gravatar: "https://randomuser.me/api/portraits/women/35.jpg",
-  techStack: ["R"],
-  location: "Créteil, France",
-  fieldOfInterest: ["Data Science", "hello"],
-  seeking: ["Part Time"],
-  bio: "Passionate Web Development enthusiast. If you get stuck, try doing the opposite of what the solution requires.",
-  twitterURL: "http://twitter.com/silverzebra195",
-  linkedinURL: "http://linkedin.com/in/silverzebra195",
-  createdAt: "2024-01-18T13:52:09.101Z",
-  updatedAt: "2024-01-18T13:52:09.101Z",
-  __v: 0,
-};
-
 export default function ProfileCard({ student }: any) {
   //const profilehex = await getSHA256Hash(student.name);
   const [avatar, setAvatar] = useState("");

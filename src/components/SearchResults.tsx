@@ -3,7 +3,7 @@ import React from "react";
 import ProfileCard from "./ProfileCard";
 import StudentsList from "./StudentsList";
 
-export default function SearchReasults({ students }: any) {
+export default function SearchResults({ students }: any) {
   return (
     <>
       <section className="px-4">

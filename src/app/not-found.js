@@ -21,7 +21,7 @@ export default function NotFound() {
             <div className="w-max flex items-center">
               <div className="w-16 h-16">
                 <Image
-                  src="/favicon.ico"
+                  src="/logo.png"
                   alt="logo"
                   width={512}
                   height={512}

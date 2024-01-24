@@ -119,9 +119,9 @@ export default function Profile({ student }: any) {
         <div className="w-full">
           <p className="capitalize text-3xl font-bold">{student.name}</p>
           <p className="capitalize text-lg font-normal text-accent">
-            {student.fieldOfInterest.join(",")}
+            {student?.fieldOfInterest.join(",")}
           </p>
-          {student.bio
+          {student?.bio
             .trim()
             .split(". ")
             .map((p: string) => {
@@ -133,7 +133,7 @@ export default function Profile({ student }: any) {
               );
             })}
           <div className="flex flex-wrap items-center gap-2 mt-6 text-sm font-medium">
-            {student.techStack.map((tech: string) => {
+            {student?.techStack?.map((tech: string) => {
               return (
                 <div
                   key={tech}
@@ -149,8 +149,8 @@ export default function Profile({ student }: any) {
 
       <div className="space-y-4 w-full md:w-6/12">
         <div className="w-full flex flex-wrap lg:justify-end items-center text-primary font-medium gap-1">
-          {student.seeking.includes("Unavaliable") ||
-          student.seeking.length === 0 ? (
+          {student?.seeking.includes("Unavaliable") ||
+          student?.seeking.length === 0 ? (
             <svg
               stroke="currentColor"
               fill="none"
@@ -185,7 +185,7 @@ export default function Profile({ student }: any) {
               <path d="M464 256A208 208 0 1 0 48 256a208 208 0 1 0 416 0zM0 256a256 256 0 1 1 512 0A256 256 0 1 1 0 256zm256-96a96 96 0 1 1 0 192 96 96 0 1 1 0-192z"></path>
             </svg>
           )}
-          <p className="">{student.seeking.join(", ")}</p>
+          <p className="">{student?.seeking.join(", ")}</p>
         </div>
         <div className="flex flex-wrap gap-4 justify-end">
           <button
