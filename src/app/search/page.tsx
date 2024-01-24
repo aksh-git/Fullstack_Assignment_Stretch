@@ -7,6 +7,7 @@ import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function Page() {
+  
   const searchParams = useSearchParams();
   const query = searchParams.get("query");
 
