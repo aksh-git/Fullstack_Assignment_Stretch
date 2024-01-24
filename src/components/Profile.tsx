@@ -121,7 +121,7 @@ export default function Profile({ student }: any) {
           <p className="capitalize text-lg font-normal text-accent">
             {student?.fieldOfInterest.join(",")}
           </p>
-          {student.bio &&
+          {student?.bio &&
             student.bio
               .trim()
               .split(". ")

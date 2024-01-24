@@ -7,28 +7,29 @@ import { useSearchParams } from "next/navigation";
 import { useEffect, useState } from "react";
 
 export default function Page() {
-  
   const searchParams = useSearchParams();
   const query = searchParams.get("query");
 
   const [data, setData] = useState<any>(null);
   const [isLoading, setLoading] = useState(false);
 
-  useEffect(() => {
-    if (query) {
-      setLoading(true);
-      const api_url = `/api/search?query=${query}`;
-      fetch(api_url)
-        .then((res) => res.json())
-        .then((data) => {
-          console.log("Logged",data);
-          setData(data);
-          setLoading(false);
-        });
-    } else {
-      setLoading(false);
-    }
-  }, []);
+  if (query) {
+    setLoading(true);
+    const api_url = `/api/search?query=${query}`;
+    fetch(api_url, {
+      next: {
+        revalidate: 0,
+      },
+    })
+      .then((res) => res.json())
+      .then((data) => {
+        console.log("Logged", data);
+        setData(data);
+        setLoading(false);
+      });
+  } else {
+    setLoading(false);
+  }
 
   return (
     <>
