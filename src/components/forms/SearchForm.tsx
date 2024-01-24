@@ -24,7 +24,7 @@ export default function SearchForm() {
       <input
         type="submit"
         value="Search"
-        className="cursor-pointer py-2 px-4 rounded-md text-base border-2 appearance-none text-slate-50 bg-accent border-accent active:scale-95"
+        className="cursor-pointer py-2 px-4 rounded-md text-base border-2 appearance-none bg-accent border-accent active:scale-95"
       ></input>
     </form>
   );
