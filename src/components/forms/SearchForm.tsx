@@ -10,7 +10,7 @@ export default function SearchForm() {
           name="query"
           id="keyword"
           minLength={3}
-          className="rounded-md block py-2 px-4 w-full text-base bg-transparent border-2 border-accent appearance-none dark:text-white dark:border-accent focus:outline-none focus:ring-0 focus:border-accent peer"
+          className="rounded-md block py-2 px-4 w-full text-base bg-transparent border-2 border-accent appearance-none focus:outline-none focus:ring-0 focus:border-accent peer"
           placeholder=" "
           required
         />
@@ -24,7 +24,7 @@ export default function SearchForm() {
       <input
         type="submit"
         value="Search"
-        className="cursor-pointer py-2 px-4 rounded-md text-base border-2 appearance-none text-slate-50 bg-accent border-accent active:scale-95"
+        className="cursor-pointer py-2 px-4 rounded-md text-base border-2 appearance-none text-white bg-accent border-accent active:scale-95"
       ></input>
     </form>
   );
