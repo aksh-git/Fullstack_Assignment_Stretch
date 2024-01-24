@@ -27,7 +27,7 @@ export default function Page() {
     } else {
       setLoading(false);
     }
-  }, [query]);
+  }, []);
 
   return (
     <>
